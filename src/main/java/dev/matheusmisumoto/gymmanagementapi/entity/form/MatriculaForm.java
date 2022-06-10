@@ -1,7 +1,22 @@
 package dev.matheusmisumoto.gymmanagementapi.entity.form;
 
-public class MatriculaForm {
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Positive;
 
-  private Long alunoId;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+//Generate getters, setters, equals, hashcode
+@Data
+
+//Mandatory for hibernate
+@NoArgsConstructor
+@AllArgsConstructor
+public class MatriculaForm {
+	
+	@NotNull(message = "Preencha o campo corretamente")
+	@Positive(message = "O ID do aluno precisa ser um número positivo")
+	private Long alunoId;
 
 }
