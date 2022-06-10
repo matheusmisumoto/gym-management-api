@@ -1,6 +1,7 @@
 package dev.matheusmisumoto.gymmanagementapi.service;
 
 import dev.matheusmisumoto.gymmanagementapi.entity.Aluno;
+import dev.matheusmisumoto.gymmanagementapi.entity.AvaliacaoFisica;
 import dev.matheusmisumoto.gymmanagementapi.entity.form.AlunoForm;
 import dev.matheusmisumoto.gymmanagementapi.entity.form.AlunoUpdateForm;
 
@@ -41,4 +42,6 @@ public interface IAlunoService {
    * @param id - id do Aluno que será removido.
    */
   void delete(Long id);
+  
+  List<AvaliacaoFisica> getAllAvaliacaoFisicaByAluno(Long id);
 }
